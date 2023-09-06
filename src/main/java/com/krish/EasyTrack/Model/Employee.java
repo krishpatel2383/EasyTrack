@@ -2,6 +2,8 @@ package com.krish.EasyTrack.Model;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,6 +30,7 @@ public class Employee {
 	private String last_name;
 
 	@OneToMany(mappedBy = "employee")
+	@JsonManagedReference
 	private List<Attendance> attendanceList;
 
 	public List<Attendance> getAttendanceList() {
