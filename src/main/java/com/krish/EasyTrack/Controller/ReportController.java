@@ -20,12 +20,6 @@ public class ReportController {
 	@GetMapping("/{id}")
 	ResponseEntity<Report> generateReport(@PathVariable int id) {
 
-//		Report report = new Report();
-//		report.setTotalDaysWorked(reportService.getTotalDaysworked(id));
-//		report.setTotalHoursWorked(reportService.getTotalHoursWorked(id));
-//		report.setAvgCheckInTime(reportService.getAvgCheckInTime(id));
-//		report.setAvgCheckOuTime(reportService.getAvgCheckOutTime(id));
-
 		return ResponseEntity.ok(reportService.generateReport(id));
 	}
 }
