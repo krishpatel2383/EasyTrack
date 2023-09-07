@@ -14,6 +14,7 @@
 ## Technologies Used
 
 - Spring Boot
+- Spring Security
 - Hibernate
 - MySQL
   
